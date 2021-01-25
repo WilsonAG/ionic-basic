@@ -1,0 +1,20 @@
+<app-header title="Resources"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let resource of resources">
+      <ion-icon
+        slot="start"
+        name="close"
+        *ngIf="!resource.completed"
+      ></ion-icon>
+      <ion-icon
+        slot="start"
+        name="checkmark"
+        *ngIf="resource.completed"
+      ></ion-icon>
+      <ion-label> {{ resource.title }} </ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="resource.completed"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>

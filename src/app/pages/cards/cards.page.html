@@ -1,0 +1,37 @@
+<app-header title="Cards"></app-header>
+
+<ion-content>
+  <!-- <ion-avatar>
+    <img src="assets/1-image.jpg" />
+  </ion-avatar>
+
+  <ion-chip color="primary">
+    <ion-avatar>
+      <img src="assets/2-image.jpg" />
+    </ion-avatar>
+    <ion-label>Chip Avatar</ion-label>
+  </ion-chip> -->
+
+  <ion-list>
+    <ion-item *ngFor="let p of people" (click)="showAlert(p)">
+      <ion-avatar slot="start">
+        <img [src]="p.img" />
+      </ion-avatar>
+      <ion-label> {{ p.name }} </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/1-image.jpg" alt="" />
+      <ion-card-title>Awesome Title</ion-card-title>
+      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad fugit
+      deserunt accusamus, et iste odio earum officia molestias libero.
+      Inventore?
+    </ion-card-content>
+  </ion-card>
+</ion-content>
